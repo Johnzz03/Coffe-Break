@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cafe Break</title>
+<style>
+body {
+  background-color: #222;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.h1{
+justify-content: flex-start;
+}
+
+.logo {
+  font-size: 4em;
+  color: orange;
+}
+
+.logo img {
+  height: 50px;
+  margin-left: 10px;
+}
+
+.button {
+  background-color: #ddd;
+  color: #222;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+  width: 500px;
+}
+
+.button:hover {
+  background-color: #eee;
+}
+
+.coffee-beans {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-image: url('https://www.freecodecamp.org/news/content/images/2023/03/coffee-beans.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="content">
+    <h1 class="logo">Hello!</h1>
+    <p>OR</p>
+    <button class="button" onclick="window.location.href='4.html'">Sign Up</button></br>
+    <a href="welcome-to-break -caffe.html">Continue as guest</a>
+  </div>
+  <div class="coffee-beans"></div>
+</div>
+
+</body>
+</html>

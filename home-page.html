@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Break</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #eee4e4;
+            color: #000; /* Changed text color to black */
+            margin: 0;
+        }
+        nav a {
+            color: #000;
+            text-decoration: none;
+            padding: 15px;
+        }
+
+        header {
+            background-color: #ebdede;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #000; /* Changed header text color to black */
+        }
+
+        .search-bar {
+            width: 300px;
+            height: 40px;
+            padding: 10px;
+            border: 1px solid #eee7e7;
+            border-radius: 5px;
+            background-color: #f0eded;
+            color: #000; /* Changed search bar text color to black */
+        }
+
+        .search-bar::placeholder {
+            color: #888;
+        }
+
+        .filter-button {
+            padding: 10px 20px;
+            background-color: #ff8800;
+            color: #000; /* Changed filter button text color to black */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .offer-section {
+            text-align: center;  /* Centering the text */
+            padding: 20px;
+            background-color: #e9dfdf;
+            position: relative; 
+            color: #000; /* Changed offer section text color to black */
+        }
+
+        .offer-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .offer-image {
+            width: 400px;
+            height: 250px;
+            object-fit : cover;
+            display: block; /* Ensures the image is centered */
+            margin: 0 auto; /* Centers the image */
+        }
+
+        .menu-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+
+        .menu-category {
+            flex: 1;
+            margin: 10px;
+            background-color: #f7eaea;
+            border-radius: 5px;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(240, 236, 236, 0.5);
+        }
+
+        .menu-category h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #000; /* Changed menu category header color to black */
+        }
+
+        .coffee-item {
+            margin: 5px 0;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            color: #000; /* Changed coffee item text color to black */
+        }
+
+        .coffee-item img {
+            width: 100px; /* Set a fixed width */
+            height: 100px; /* Set a fixed height */
+            object-fit: cover; /* Maintain aspect ratio */
+            margin-right: 10px; /* Space between image and text */
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ece8e8;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            color: #000; /* Changed footer text color to black */
+        }
+
+        .hd-button {
+            background-color: #ff8800; 
+            color: #000; /* Changed button text color to black */
+            padding: 15px 30px;  
+            border: none;  
+            border-radius: 10px; 
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(233, 229, 229, 0.2); 
+            transition: transform 0.1s ease;
+        }
+
+        .hd-button:hover {
+            transform: translateY(-2px); 
+            box-shadow: 0 4px 8px rgba(238, 236, 236, 0.3); 
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="welcome-to-break -caffe.html">Welcome</a>
+        <a href="terms-and-condition.html">Terms and Condition</a>
+        <a href="menu.html"><U>Home</U></a>
+    </nav>
+    <header>
+        <h1>Cafe Break</h1>
+        <input type="text" class="search-bar" placeholder="Search...">
+        <button class="filter-button">Filter</button>
+    </header>
+    <div class="offer-section">
+        <h1>Special Offer</h1>
+        <img src="free.jpg" alt="Special Offer" class="offer-image">
+        <div class="button-container">
+            <button class="hd-button">Espresso</button>
+            <button class="hd-button">Cappuccino</button>
+            <button class="hd-button">Latte</button>
+            <button class="hd-button">Cafe Latte</button>
+        </div>
+    </div>
+    <div class="menu-section">
+        <div class="menu-category">
+            <h3>Espresso</h3>
+            <div class="coffee-item"><img src="download (2).jpg" alt="coffee"><button class="menu-button" onclick="window.location.href='6.html';">6$</button></div>
+        </div>
+        <div class="menu-category">
+            <h3>Cappuccino</h3>
+            <div class="coffee-item"><img src="j.jpg" alt="coffee">(Without Milk):<button class="menu-button" onclick="window.location.href='6.html';">15$</button></div>
+            <div class="coffee-item"><img src="0.jpg" alt="coffee"> (With Milk):<button class="menu-button" onclick="window.location.href='6.html';">16$</button></div>
+        </div>
+        <div class="menu-category">
+            <h3>Latte</h3>
+            <div class="coffee-item"><img src="1.jpg" alt="coffee"><button class="menu-button" onclick="window.location.href='6.html';">4$</button></div>
+        </div>
+        <div class="menu-category">
+            <h3>Cafe Latte</h3>
+            <div class="coffee-item"><img src="2.jpg" alt="coffee"> <button class="menu-button" onclick="window.location.href='6.html';">5$</button></div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Cafe Break. All rights reserved.</p>
+    </footer>
+    <script>
+        document.querySelector('.filter-button').addEventListener('click', function() {
+            alert('Filter functionality coming soon!');
+        });
+
+        document.querySelector('.button-container .hd-button:nth-child(1)').addEventListener('click', function() {
+            showItems('Espresso');
+        });
+
+        document.querySelector('.button-container .hd-button:nth-child(2)').addEventListener('click', function() {
+            showItems('Cappuccino');
+        });
+
+        document.querySelector('.button-container .hd-button:nth-child(3)').addEventListener('click', function() {
+            showItems('Latte');
+        });
+
+        document.querySelector('.button-container .hd-button:nth-child(4)').addEventListener('click', function() {
+            showItems('Cafe Latte');
+        });
+
+        function showItems(coffeeType) {
+            const menuItems = document.querySelectorAll('.menu-category');
+            menuItems.forEach(item => {
+                item.style.display = 'none'; // Hide all items
+                if (item.querySelector('h3').textContent === coffeeType) {
+                    item.style.display = 'block'; // Show only the selected item
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuItems = document.querySelectorAll('.menu-category');
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    alert(`You selected: ${this.querySelector('h3').innerText}`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

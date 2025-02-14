@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manual Brew</title>
+  <style>
+    body {
+      background-color: #222;
+      color: #fff;
+      font-family: sans-serif;
+      text-align: center;
+      background-image: url('Coffee-Break-2_theedgemarkets_24.jpg');
+    }
+
+    .coffee-list {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .coffee-list li {
+      list-style: none;
+      margin: 10px;
+      text-align: center;
+    }
+
+    .coffee-list .price {
+      text-align: right;
+    }
+
+    button {
+      background-color: #444;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    button:hover {
+      background-color: #666;
+    }
+
+    #selected-coffee {
+      font-size: 1.5em;
+      margin-top: 20px;
+    }
+
+    img {
+      max-width: 500px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .back-button {
+      margin-top: 30px;
+    }
+  </style>
+  <script>
+    function redirectToPage(coffee, price) {
+      const url = `thank-you-for-ordering.html?coffee=${encodeURIComponent(coffee)}&price=${encodeURIComponent(price)}`;
+      window.location.href = url;
+    }
+
+    function goHome() {
+      window.location.href = 'welcome-to-break -caffe.html';
+    }
+  </script>
+</head>
+<body>
+
+  <h2>Coffee Varieties With Discount</h2>
+  <ul class="coffee-list">
+    <li>
+      <img src="images (17)-1.jpeg" alt="Lutos Biscoff Late">
+      <button onclick="redirectToPage('Lutos Biscoff Late', '$15.00')">Lutos Biscoff Late <span class="price">$20.00</span></button>
+    </li>
+    <li>
+      <img src="images (16)-1.jpeg" alt="Almond Roca Creme">
+      <button onclick="redirectToPage('Almond Roca Creme', '$12.00')">Almond Roca Creme <span class="price">$18.00</span></button>
+    </li>
+    <li>
+      <img src="images (15)-1.jpeg" alt="English Toffe">
+      <button onclick="redirectToPage('English Toffe', '$18.00')">English Toffe <span class="price">$25.00</span></button>
+    </li>
+    <li>
+      <img src="images (14)-1.jpeg" alt="Roca Mocha">
+      <button onclick="redirectToPage('Roca Mocha', '$20.00')">Roca Mocha <span class="price">$20.00</span></button>
+    </li>
+  </ul>
+
+  <div id="selected-coffee"></div>
+
+  <div class="back-button">
+    <button onclick="goHome()">Back to Home</button>
+  </div>
+</body>
+</html>

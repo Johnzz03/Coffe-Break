@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Your Order</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            background-image: url('img1.jpg');
+        }
+        h1 {
+            color: #000;
+            font-size: 2.5em; 
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 1.6;
+            font-size: 1.2em;
+            margin: 10px 0;
+            color: #000;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 rgba(0, 0, 0, 0);
+            transition: transform 0.2s;
+        }
+        .container:hover {
+            transform: translateY(-5px); 
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px; 
+            padding: 10px 20px; 
+            font-size: 1em;
+            cursor: pointer;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2), 
+                        -4px -4px 10px rgba(255, 255, 255, 0.7); 
+            transition: transform 0.2s; 
+        }
+        button:hover {
+            transform: translateY(-3px); 
+        }
+    </style>
+    <script>
+        function goBack() {
+            window.location.href = 'welcome-to-break -caffe.html';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Thank You for Your Order!</h1>
+        <p>Dear Customer,</p>
+        <p>Thank you so much for your order! We truly appreciate your business and are excited to serve you.</p>
+        <p>Your order has been received and is being processed. You will receive an email with tracking information once it has shipped.</p>
+        <p>As a token of our appreciation, we’d like to offer you a 20% Discount. Use the code 456789 on your next purchase to enjoy 20% off.</p>
+        <p>If you have any questions or concerns, please don’t hesitate to reach out to our customer service team. We’re here to help!</p>
+        <p>Thank you once again for choosing us. We can’t wait for you to enjoy your new Coffee! Have a great day!</p>
+        <p>Best regards,<br>Caffe Brak</p>
+        <button onclick="goBack()">OK</button>
+    </div>
+</body>
+</html>

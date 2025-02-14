@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BreakCaff</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url('background1.jpg');
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: #f6f8fa;
+            color: #ffffff;
+            padding: 20px 0;
+        }
+
+        nav a {
+            color: #000;
+            text-decoration: none;
+            padding: 15px;
+        }
+
+        nav a:hover {
+            background: #e8491d;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .menu-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .menu-item {
+            background: #ffffff;
+            border: 1px solid #dddddd;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+            flex: 1 1 30%;
+            max-width: 20%; 
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .menu-button {
+            padding: 10px 15px;
+            background-color: #000000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .menu-button:hover {
+            background-color: #e8491d;
+        }
+
+        footer {
+            background: #feffff;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            .menu-item {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+        </div>
+        <nav>
+            <a href="welcome-to-break -caffe.html">Welcome</a>
+            <a href="terms-and-condition.html">Terms and Condition</a>
+            <a href="menu.html"><U>Home</U></a>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1>OUR MENU</h1>
+            <div class="menu-items">
+                <section class="menu-item">
+                    <img src="images (11)-1.jpeg" alt="Exselsa">
+                    <h2>Hot Beverages</h2>
+                    <p>Wide range of Flavoring Hot coffee to make you feel fresh and light.</p>
+                    <button class="menu-button" onclick="window.location.href='6.html';">30$</button>
+                </section>
+                <section class="menu-item">
+                    <img src="images (10)-1.jpeg" alt="Liberica">
+                    <h2>Liberica</h2>
+                    <p>Creamy and body full cold coffee to make you cool.</p>
+                    <button class="menu-button" onclick="window.location.href='6.html';">25$</button>
+                </section>
+                <section class="menu-item">
+                    <img src="images (17)-1.jpeg" alt="Lutos Biscoff">
+                    <h2>Lutos Biscoff</h2>
+                    <p>Fruit and refreshing juice to make fast refresh.</p>
+                    <button class="menu-button" onclick="window.location.href='6.html';">30$</button>
+                </section>
+                <section class="menu-item">
+                    <img src="images (13)-1.jpeg" alt="Cappuchino">
+                    <h2>Cappuchino</h2>
+                    <p>Your favorite eating and drinking combinations.</p>
+                    <button class="menu-button" onclick="window.location.href='6.html';">40$</button>
+                </section>
+                <section class="menu-item">
+                    <img src="images (14)-1.jpeg" alt="Roca Mocha">
+                    <h2>Roca Mocha</h2>
+                    <p>Satisfy your taste and enjoy you to a culinary treat.</p>
+                    <button class="menu-button" onclick="window.location.href='6.html';">20$</button>
+                </section>
+                <section class="menu-item">
+                    <img src="images (15)-1.jpeg" alt="English Toffee">
+                    <h2>English Toffee</h2>
+                    <p>Delicious burgers paired with crispy French fries for a perfect meal.</p>
+                    <button class="menu-button" onclick="window.location.href='6.html';">30$</button>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 BreakCaff. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    alert(`You selected: ${this.querySelector('h2').innerText}`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

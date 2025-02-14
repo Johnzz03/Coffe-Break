@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <style>
+           header {
+        background-color: #f0eeee;
+        color: #1b1a1a;
+        padding: 10px 0;
+        text-align: center;
+    }
+    nav a {
+        color: #000;
+        text-decoration: none;
+        padding: 15px;
+    }
+
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .product {
+        background-color: #ebe2e2;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 600px;
+        max-width: 90%;
+    }
+
+    .product-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        position: relative; /* For positioning arrows */
+    }
+
+    .product-image img {
+        width: 150px;
+        height: 200px;
+        display: none; /* Initially hide all images */
+    }
+
+    .product-image img.active {
+        display: block; /* Show the active image */
+    }
+
+    .product-image .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+         background-color: rgba(0, 0, 0, 0.7);
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .product-image .arrow.left {
+        left: 10px;
+    }
+
+    .product-image .arrow.right {
+        right: 10px;
+    }
+
+    .product-details {
+        margin-bottom: 20px;
+    }
+
+    .product-details h2 {
+        margin-bottom: 10px;
+    }
+
+    .product-details p {
+        line-height: 1.6;
+    }
+
+    .product-price {
+        margin-bottom: 20px;
+    }
+
+    .product-price span {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .product-quantity {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .product-quantity input {
+        width: 50px;
+        text-align: center;
+    }
+
+    button {
+        background-color: #f08080;
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    button:hover {
+        background-color: #ff6300;
+    }
+
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+</style>
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="welcome-to-break -caffe.html"><u>Welcome</u></a>
+        <a href="terms-and-condition.html">Terms and Condition</a>
+        <a href="home-page.html">Home</a>
+    </nav>
+    <header>
+        <h1>Welcome to Our Coffee Shop</h1>
+    </header>
+    <div class="container">
+        <div class="product">
+            <div class="product-image">
+                <img src="images (15)-1.jpeg" alt="Coffee Bag" class="active"> 
+                <img src="images (15)-1.jpeg" alt="English Toffee">
+                <img src="images (14)-1.jpeg" alt="Roca Mocha">
+                <img src="images (13)-1.jpeg" alt="Cappuchino">
+                <img src="images (17)-1.jpeg" alt="Lutos Biscoff">
+                <button class="arrow left">&lt;</button>
+                <button class="arrow right">&gt;</button>
+            </div>
+            <div class="product-details">
+                <h2>Organic Coffee</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempus mauris neque, id laoreet nisl efficitur feugiat.</p>
+            </div>
+            <div class="product-price">
+                <span>Price: $6.20</span>
+            </div>
+            <div class="product-quantity">
+                <button class="minus">-</button>
+                <input type="number" value="1" min="1">
+                <button class="plus">+</button>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Coffee Shop. All rights reserved.</p>
+    </footer>
+    <script>
+        const images = document.querySelectorAll('.product-image img');
+        const descriptions = [
+            "Coffee Bag: A rich blend of organic coffee.",
+            "English Toffee: A sweet treat to complement your coffee.",
+            "Roca Mocha: A delightful mix of chocolate and coffee.",
+            "Cappuchino: A classic coffee drink with frothy milk.",
+            "Lutos Biscoff: A crunchy biscuit perfect for dipping."
+        ];
+        let currentIndex = 0;
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.classList.remove('active');
+                if (i === index) {
+                    img.classList.add('active');
+                    document.querySelector('.product-details p').textContent = descriptions[i];
+                }
+            });
+        }
+
+        document.querySelector('.arrow.right').addEventListener('click', function() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        });
+
+        document.querySelector('.arrow.left').addEventListener('click', function() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        });
+
+        document.querySelector('.add-to-cart').addEventListener('click', function() {
+            alert('Item added to cart!');
+        });
+
+        document.querySelector('.minus').addEventListener('click', function() {
+            const input = document.querySelector('.product-quantity input');
+            if (input.value > 1) {
+                input.value--;
+            }
+        });
+
+        document.querySelector('.plus').addEventListener('click', function() {
+            const input = document.querySelector('.product-quantity input');
+            input.value++;
+        });
+
+        // Initialize the first image and description
+        showImage(currentIndex);
+    </script>
+</body>
+</html>

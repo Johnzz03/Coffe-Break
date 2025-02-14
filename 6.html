@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: #222;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+
+.payment-options {
+  width: 300px;
+}
+
+.payment-options h2 {
+  margin-bottom: 10px;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.payment-option img {
+  margin-right: 10px;
+}
+
+.payment-option input {
+  margin-left: auto;
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.payment-option input:checked {
+  background-color: white;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.image {
+  width: 300px;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.back-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="image">
+      <img src="90.jpg" alt="Payment Options">
+    </div>
+    <h1 class="title">Select Payment Method</h1>
+    <div class="payment-options">
+      <h2>Available Options</h2>
+      <div class="payment-option">
+        <img src="91.png" alt="Credit Card" width="50">
+        <label>Credit Card</label>
+        <input type="radio" name="payment" value="credit-card">
+      </div>
+      <div class="payment-option">
+        <img src="92.png" alt="PayPal" width="50">
+        <label>PayPal</label>
+        <input type="radio" name="payment" value="paypal">
+      </div>
+      <div class="payment-option">
+        <img src="93.png" alt="Bank Transfer" width="50">
+        <label>Bank Transfer</label>
+        <input type="radio" name="payment" value="bank-transfer">
+      </div>
+    </div>
+    <div class="total">
+      <span>Total:</span>
+      <span>$15.00</span>
+    </div>
+    <button class="button" onclick="window.location.href='thank-you-for-ordering.html';">confirm payment</button>
+  </div>
+  <script>
+    function confirmPayment() {
+      const selectedPayment = document.querySelector('input[name="payment"]:checked');
+      if (selectedPayment) {
+        alert(`You have selected ${selectedPayment.value} as your payment method.`);
+      } else {
+        alert('Please select a payment method.');
+      }
+    }
+  </script>
+</body>
+</html> 
