@@ -1,0 +1,7 @@
+echo "# Coffe-Break" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Johnzz03/Coffe-Break.git
+git push -u origin main
